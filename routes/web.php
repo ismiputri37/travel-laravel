@@ -11,7 +11,11 @@
 |
 */
 
-Route::get('/', 'HomeController@index');
+Route::get('/', 'HomeController@index')
+    ->name('home');
+Route::get('/detail', 'DetailController@index')
+    ->name('detail');
+
 
 
 // webkita.com/admin
@@ -22,6 +26,4 @@ Route::prefix('admin')
             ->name('dashboard');
     });
 
-    // Route::get('halo', function () {
-    //     return "Halo, Selamat datang di tutorial laravel www.malasngoding.com";
-    // });
+   
