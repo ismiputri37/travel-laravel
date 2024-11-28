@@ -21,7 +21,7 @@ class CreateTransactionsTable extends Migration
             $table->integer('transaction_total');
             $table->integer('transaction_status');
             // IN_CART, PENDING, SUCCESS, CANCEL, FAILED
-          
+            $table->softDeletes();
             $table->timestamps();
         });
     }
