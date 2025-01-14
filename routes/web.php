@@ -21,10 +21,10 @@ Route::get('/checkout/success', 'CheckoutController@success')
     ->name('checkout-success');
 
 
-
 // webkita.com/admin
 Route::prefix('admin')
     ->namespace('Admin')
+    ->middleware(['auth','admin'])
     ->group(function(){
         Route::get('/', 'DashboardController@index')
             ->name('dashboard');
